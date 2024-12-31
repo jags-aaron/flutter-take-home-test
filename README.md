@@ -23,3 +23,38 @@ Add extra packages to help with the App Styling and mock data
 - `flex_color_scheme`
 - `google_fonts`
 - `random_name_generator`
+3. For this exercise I'm considering a simple `Layered Architecture` approach with 3 layers
+    - PRESENTER
+      - Bloc - to manage states
+      - MVC pattern - for the UI
+        - View
+        - Controller
+        - Model
+    - DOMAIN
+      - Entities
+      - UseCases
+    - DATA
+      - Repositories
+      - Sources
+      - Models
+4. The folder structure will be as follow:
+    - main.dart - App entry point
+    - app.dart - All related to high level app configuration and MaterialApp
+    - app_router.dart - All related to App navigation
+    - /app_config - theme, colors, fonts, etc
+    - /data
+      - /models
+      - /sources
+      - /repositories
+    - /domain
+      - /entities
+      - /use_cases
+    - /presenter
+      - /<feature>
+        - /bloc
+          - /<feature>_bloc.dart
+          - /<feature>_states.dart
+          - /<feature>_events.dart
+        - <feature>_view.dart
+        - <feature>_controller.dart
+        - <feature>_model.dart
