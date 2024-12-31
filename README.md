@@ -58,3 +58,4 @@ Add extra packages to help with the App Styling and mock data
         - <feature>_view.dart
         - <feature>_controller.dart
         - <feature>_model.dart
+5. create the identified entities and models

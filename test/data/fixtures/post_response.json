@@ -1,0 +1,18 @@
+[
+  {
+    "id": "1",
+    "title": "Post Title 1",
+    "description": "Description of Post 1",
+    "imageUrl": "https://picsum.photos/200/300",
+    "thumbnailUrl": "https://picsum.photos/200/300",
+    "postedBy": "1"
+  },
+  {
+    "id": "2",
+    "title": "Post Title 2",
+    "description": "Description of Post 2",
+    "imageUrl": "https://picsum.photos/200/300",
+    "thumbnailUrl": "https://picsum.photos/200/300",
+    "postedBy": "2"
+  }
+]
