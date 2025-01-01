@@ -7,14 +7,22 @@ class UserModel extends User {
     required super.email,
     required super.photoUrl,
     required super.thumbnailUrl,
+    required super.posts,
     required super.friends,
   });
 
   factory UserModel.fromJson(Map<String, dynamic> json) {
-    List<User> friends = [];
+    List<String> friends = [];
     if(json['friends'] != null) {
-      for (var friend in json['friends']) {
-        friends.add(UserModel.fromJson(friend));
+      for (var data in json['friends']) {
+        friends.add(data['id']);
+      }
+    }
+
+    List<String> posts = [];
+    if(json['posts'] != null) {
+      for (var data in json['posts']) {
+        friends.add(data['id']);
       }
     }
 
@@ -25,6 +33,7 @@ class UserModel extends User {
       photoUrl: json['photoUrl'],
       thumbnailUrl: json['thumbnailUrl'],
       friends: friends,
+      posts: posts
     );
   }
 }

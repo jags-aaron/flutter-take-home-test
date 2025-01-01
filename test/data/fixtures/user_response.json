@@ -4,20 +4,20 @@
   "email": "user_email",
   "photoUrl": "https://picsum.photos/200/300",
   "thumbnailUrl": "https://picsum.photos/200/300",
-  "friends": [
+  "posts": [
     {
-      "id": "1",
-      "name": "friend_name",
-      "email": "friend_email",
-      "photoUrl": "https://picsum.photos/200/300",
-      "thumbnailUrl": "https://picsum.photos/200/300"
+      "id": "1"
     },
     {
-      "id": "2",
-      "name": "friend_name",
-      "email": "friend_email",
-      "photoUrl": "https://picsum.photos/200/300",
-      "thumbnailUrl": "https://picsum.photos/200/300"
+      "id": "2"
+    }
+  ],
+  "friends": [
+    {
+      "id": "1"
+    },
+    {
+      "id": "2"
     }
   ]
 }
