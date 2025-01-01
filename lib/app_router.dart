@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_take_home/presenter/profile/entry_route.dart';
 import 'package:go_router/go_router.dart';
 import 'package:provider/provider.dart';
 
@@ -15,26 +16,12 @@ class GoRouterNavigation extends AppRouter {
 
   @override
   final routerConfig = GoRouter(
-    initialLocation: '/',
+    initialLocation: ProfileRoute.routePath,
     routes: _appRoutes,
     debugLogDiagnostics: true,
   );
 
   static get _appRoutes => [
-        GoRoute(
-          path: '/',
-          builder: (context, state) {
-            return Scaffold(
-              appBar: AppBar(
-                title: const Text('Profiles'),
-              ),
-              body: const SafeArea(
-                child: Center(
-                  child: Text('Hello :)'),
-                ),
-              ),
-            );
-          },
-        )
+        ProfileRoute(),
       ];
 }

@@ -14,10 +14,36 @@
   ],
   "friends": [
     {
-      "id": "1"
+      "id": "1",
+      "name": "user_name",
+      "email": "user_email",
+      "photoUrl": "https://picsum.photos/200/300",
+      "thumbnailUrl": "https://picsum.photos/200/300",
+      "friends": [],
+      "posts": [
+        {
+          "id": "1"
+        },
+        {
+          "id": "2"
+        }
+      ]
     },
     {
-      "id": "2"
+      "id": "2",
+      "name": "user_name",
+      "email": "user_email",
+      "photoUrl": "https://picsum.photos/200/300",
+      "thumbnailUrl": "https://picsum.photos/200/300",
+      "friends": [],
+      "posts": [
+        {
+          "id": "3"
+        },
+        {
+          "id": "4"
+        }
+      ]
     }
   ]
 }

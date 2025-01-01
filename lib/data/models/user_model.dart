@@ -12,17 +12,17 @@ class UserModel extends User {
   });
 
   factory UserModel.fromJson(Map<String, dynamic> json) {
-    List<String> friends = [];
+    List<User> friends = [];
     if(json['friends'] != null) {
       for (var data in json['friends']) {
-        friends.add(data['id']);
+        friends.add(UserModel.fromJson(data));
       }
     }
 
     List<String> posts = [];
     if(json['posts'] != null) {
       for (var data in json['posts']) {
-        friends.add(data['id']);
+        posts.add(data['id']);
       }
     }
 

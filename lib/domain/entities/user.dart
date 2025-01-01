@@ -5,7 +5,7 @@ class User {
   final String photoUrl;
   final String thumbnailUrl;
   final List<String> posts;
-  final List<String> friends;
+  final List<User> friends;
 
   User({
     required this.id,

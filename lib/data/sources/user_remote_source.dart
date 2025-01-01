@@ -18,15 +18,26 @@ class UserRemoteSourceImp implements UserRemoteSource {
         thumbnailUrl: thumbnail,
         friends: [
           ...List.generate(
-            10,
-            (index) => '${index + 1}',
+            20,
+            (index) {
+              final (image, thumbnail) = MockUtils.randomImage();
+              return UserModel(
+                id: index.toString(),
+                name: MockUtils.randomName(),
+                email: MockUtils.randomEmail(),
+                photoUrl: image,
+                thumbnailUrl: thumbnail,
+                friends: [],
+                posts: [],
+              );
+            },
           ),
         ],
         posts: [
-          "1",
-          "2",
-          "3",
-          "4",
+          ...List.generate(
+            5,
+            (index) => '${index + 1}',
+          ),
         ]);
   }
 }
