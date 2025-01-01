@@ -36,7 +36,17 @@ class PostListScreenController extends StatelessWidget {
           model: PostListScreenModel.build(
             title: '${_friend.name}\'s Posts',
             posts: state.posts ?? [],
-            onPostSelected: (postId) {},
+            onPostSelected: (postId) {
+              // TODO
+              ScaffoldMessenger.of(context).showSnackBar(SnackBar(
+                content: Column(
+                  children: [
+                    Text('(Post $postId selected)'),
+                    Text('TODO: Navigate to post detail screen'),
+                  ],
+                ),
+              ));
+            },
           ),
         );
       },
