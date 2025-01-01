@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_take_home/presenter/post_list/entry_route.dart';
 import 'package:flutter_take_home/presenter/profile/entry_route.dart';
 import 'package:go_router/go_router.dart';
 import 'package:provider/provider.dart';
@@ -23,5 +24,6 @@ class GoRouterNavigation extends AppRouter {
 
   static get _appRoutes => [
         ProfileRoute(),
+        PostListRoute(),
       ];
 }

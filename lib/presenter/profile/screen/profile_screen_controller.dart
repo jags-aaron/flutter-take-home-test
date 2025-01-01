@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:flutter_take_home/presenter/post_list/entry_route.dart';
 import 'package:flutter_take_home/presenter/profile/bloc/profile_bloc_event.dart';
+import 'package:flutter_take_home/presenter/profile/entry_route.dart';
+import 'package:go_router/go_router.dart';
 import '../bloc/profile_bloc.dart';
 import '../bloc/profile_bloc_state.dart';
 import 'profile_screen_view.dart';
@@ -28,10 +31,11 @@ class ProfileScreenController extends StatelessWidget {
           model: ProfileScreenModel.build(
             title: 'Profile',
             friends: state.user?.friends ?? [],
-            onFriendSelected: (friendId) {
-              /*GoRouter.of(context).go('/detail', parameters: {
-                'friend': jsonEncode(state.user?.friends),
-              });*/
+            onFriendSelected: (friend) {
+              context.push(
+                '${PostListRoute.routePath}/${friend.id}',
+                extra: {'friend': friend},
+              );
             },
             userData: state.user,
             friendListTitle: 'List of Friends',

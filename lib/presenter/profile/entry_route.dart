@@ -25,8 +25,5 @@ class ProfileRoute extends GoRoute {
               child: const ProfileScreenController(),
             );
           },
-          routes: <RouteBase>[
-            // TODO: Add child routes here
-          ],
         );
 }

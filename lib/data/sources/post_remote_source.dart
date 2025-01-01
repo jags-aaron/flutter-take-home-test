@@ -19,7 +19,7 @@ class PostRemoteSourceImp implements PostRemoteSource {
         description: 'Description $index',
         imageUrl: image,
         thumbnailUrl: thumbnail,
-        postedBy: 'User $index',
+        postedBy: mockListOfFriends[index].name,
       );
     },
   );
@@ -27,7 +27,7 @@ class PostRemoteSourceImp implements PostRemoteSource {
   @override
   Future<Post> getPostDetails(String postId) async {
     return mockListOfPost.firstWhere(
-      (element) => element.id == postId,
+      (post) => post.id == postId,
     );
   }
 

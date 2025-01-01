@@ -27,7 +27,8 @@ class ProfileScreenView extends StatelessWidget {
                   CircleAvatar(
                     maxRadius: 50,
                     backgroundImage: NetworkImage(
-                      _model.userData?.photoUrl ?? '',
+                      _model.userData?.photoUrl ??
+                          'https://picsum.photos/200/300',
                     ),
                   ),
                   Text('Hello ${_model.userData?.name} !!'),
@@ -59,7 +60,7 @@ class ProfileScreenView extends StatelessWidget {
                         ),
                       ),
                       onTap: () => _model.onFriendSelected(
-                        friend.id,
+                        friend,
                       ),
                     ),
                   ),

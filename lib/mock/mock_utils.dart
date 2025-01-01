@@ -1,6 +1,23 @@
 import 'dart:math';
 
+import 'package:flutter_take_home/data/models/post_model.dart';
+import 'package:flutter_take_home/data/models/user_model.dart';
 import 'package:random_name_generator/random_name_generator.dart';
+
+final mockListOfFriends = List.generate(
+  20, (index) {
+    final (image, thumbnail) = MockUtils.randomImage();
+    return UserModel(
+      id: index.toString(),
+      name: MockUtils.randomName(),
+      email: MockUtils.randomEmail(),
+      photoUrl: image,
+      thumbnailUrl: thumbnail,
+      friends: [],
+      posts: [],
+    );
+  },
+);
 
 final Map<Zone, String> mockZoneMap = {
   Zone.france: 'france',

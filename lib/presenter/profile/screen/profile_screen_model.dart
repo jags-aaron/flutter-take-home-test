@@ -15,7 +15,7 @@ class ProfileScreenModel extends Equatable {
     required String friendListTitle,
     required User? userData,
     required List<User> friends,
-    required Function(String) onFriendSelected,
+    required Function(User) onFriendSelected,
   }) {
     return ProfileScreenModel._(
       title: title,
@@ -30,7 +30,7 @@ class ProfileScreenModel extends Equatable {
   final String friendListTitle;
   final User? userData;
   final List<User> friends;
-  final Function(String) onFriendSelected;
+  final Function(User) onFriendSelected;
 
   @override
   List<Object?> get props => [

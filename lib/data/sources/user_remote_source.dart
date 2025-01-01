@@ -16,23 +16,7 @@ class UserRemoteSourceImp implements UserRemoteSource {
         email: MockUtils.randomEmail(),
         photoUrl: image,
         thumbnailUrl: thumbnail,
-        friends: [
-          ...List.generate(
-            20,
-            (index) {
-              final (image, thumbnail) = MockUtils.randomImage();
-              return UserModel(
-                id: index.toString(),
-                name: MockUtils.randomName(),
-                email: MockUtils.randomEmail(),
-                photoUrl: image,
-                thumbnailUrl: thumbnail,
-                friends: [],
-                posts: [],
-              );
-            },
-          ),
-        ],
+        friends: mockListOfFriends,
         posts: [
           ...List.generate(
             5,
