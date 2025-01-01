@@ -59,3 +59,4 @@ Add extra packages to help with the App Styling and mock data
         - <feature>_controller.dart
         - <feature>_model.dart
 5. create the identified entities and models
+6. Create Use Cases with mock interfaces for Sources and Repositories
