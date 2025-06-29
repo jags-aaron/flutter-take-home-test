@@ -1,4 +1,4 @@
-# Couchsurfing Take Home
+# Take Home
 
 This is a take home project for Couchsurfing.
 
